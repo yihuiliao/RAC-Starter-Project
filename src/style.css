@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .stroke {
+    stroke-linecap:round;
+    stroke-width:2;
+    stroke-linecap: round;
+    stroke-dasharray: 22px;
+    stroke-dashoffset: 66;
+    transition: all 200ms;
+} */
+/* body{
+    background-color: black;
+} */
+
+/* .wow{
+    background-color: red;
+} */
+
