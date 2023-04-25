@@ -62,10 +62,10 @@ export function Form(props){
   return (
     <form onSubmit={handleSubmit}>
       <TextField className="flex flex-col" onChange={setTask}>
-        <Label>What do you need to do?</Label>
-        <Input value={task} className="border-2 w-5/12"/>
+        <Label className="mt-2">What do you need to do?</Label>
+        <Input value={task} className="border-2 w-5/12 rounded-md"/>
       </TextField>
-      <Button type="submit" className="border-2">Add</Button>
+      <Button type="submit" className="border-2 mt-3 mb-5 py-1 px-2 rounded-md">Add</Button>
     </form>      
   )
 }
@@ -75,14 +75,14 @@ export function ToDoList(props) {
   tasks = props.tasks;
 
   const taskList = tasks.map((task, index) => (
-    <Checkbox value={`${task.name}-${index}`} className="flex group" key={task.id}>
-      <div className="checkbox w-5 h-5 border-2 border-solid rounded-s group-data-[selected]:bg-black" aria-hidden="true">
+    <Checkbox value={`${task.name}-${index}`} className="flex group items-center	" key={task.id}>
+      <div className="checkbox w-5 h-5 border-2 border-solid rounded-s group-data-[selected]:bg-black mr-2" aria-hidden="true">
         <svg viewBox="0 0 18 18" className="w-4"></svg>
       </div>
       {task.name}
       <EditDialog editTask={props.editTask} id={task.id}/>
       {/* <Button onPress={() => props.editTask(task.id, newName)} className="border-2 w-auto">Edit</Button> */}
-      <Button onPress={() => props.deleteTask(task.id)} className="border-2 w-auto">Delete</Button>
+      <Button onPress={() => props.deleteTask(task.id)} className="border-2 w-auto ml-5">Delete</Button>
     </Checkbox>
   ))
 
@@ -100,7 +100,7 @@ export function EditDialog(props){
 
   return (
     <DialogTrigger>
-      <Button>Edit</Button>
+      <Button className="ml-24">Edit</Button>
       <Modal>
         <Dialog>
         {({ close }) => (
