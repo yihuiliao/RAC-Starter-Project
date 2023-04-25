@@ -4,5 +4,12 @@
 
 body {
     margin: 20px 40px;
-    background-color: e8e8e8;
+    /* background-color: e8e8e8; */
+}
+
+html {
+    height: 100%;
+    background-color: #e8e8e8;
+
+    /* background-color: #9c9c9c */
 }
