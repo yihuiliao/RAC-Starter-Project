@@ -104,7 +104,7 @@ export function EditDialog(props){
   return (
     <DialogTrigger>
       <Button className="ml-24 border-2 w-auto px-2 rounded-md bg-white">Edit</Button>
-      <Modal className="border-2 m-auto w-4/12 p-5 z-10 bg-white left-1/4 fixed">
+      <Modal className="border-2 m-auto p-5 z-10 bg-white left-1/4 fixed">
         <Dialog>
         {({ close }) => (
             <form>
